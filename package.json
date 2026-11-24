@@ -1,0 +1,10 @@
+{
+  "name": "sleepyhead-scoreboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}
