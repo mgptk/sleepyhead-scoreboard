@@ -84,6 +84,6 @@ export async function onRequestGet({ request, env, waitUntil }) {
     return json(body);
   } catch (err) {
     const e = err instanceof EspnError ? err : new EspnError("Something went wrong loading scores.");
-    return json(JSON.stringify({ error: e.message, code: e.code }), e.status);
+    return json(JSON.stringify({ error: e.message, code: e.code, diagnostics: e.diagnostics }), e.status);
   }
 }

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildScoreboard, fetchLeague, leagueUrl, EspnError } from "../lib/espn.js";
+import { buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
 
 const sample = JSON.parse(readFileSync(new URL("./fixtures/sample-league.json", import.meta.url)));
 
@@ -44,9 +44,26 @@ test("sends cookies and maps ESPN errors", async () => {
   assert.equal(seen.url, leagueUrl("1", "2026"));
   assert.equal(seen.opts.headers.Cookie, "espn_s2=abc; SWID={XYZ}");
 
+  const creds = { leagueId: "1", season: "2026", espnS2: "abc", swid: "XYZ" };
   const unauthorized = async () => new Response("", { status: 401 });
-  await assert.rejects(fetchLeague({ leagueId: "1", season: "2026" }, unauthorized), (e) => e instanceof EspnError && e.code === "auth");
+  await assert.rejects(fetchLeague(creds, unauthorized), (e) => e instanceof EspnError && e.code === "auth" && e.diagnostics.espnStatus === 401);
+
+  const forbidden = async () => new Response("", { status: 403 });
+  await assert.rejects(fetchLeague(creds, forbidden), (e) => e.code === "forbidden");
 
   const html = async () => new Response("<html>login</html>", { status: 200 });
-  await assert.rejects(fetchLeague({ leagueId: "1", season: "2026" }, html), (e) => e.code === "auth");
+  await assert.rejects(fetchLeague(creds, html), (e) => e.code === "auth");
+
+  let called = false;
+  const never = async () => { called = true; return new Response("{}"); };
+  await assert.rejects(fetchLeague({ leagueId: "1", season: "2026" }, never), (e) => e.code === "missing_secrets");
+  assert.equal(called, false);
+});
+
+test("cleans up pasted cookie values", () => {
+  assert.equal(normalizeEspnS2(' "AEB%2Bx%3D" \n'), "AEB%2Bx%3D");
+  assert.equal(normalizeEspnS2("espn_s2=AEB%2Bx%3D;"), "AEB%2Bx%3D");
+  assert.equal(normalizeEspnS2("AEB+x/y="), "AEB%2Bx%2Fy%3D"); // decoded copy gets re-encoded
+  assert.equal(normalizeSwid("SWID={ABC}"), "{ABC}");
+  assert.equal(normalizeSwid(" 'ABC' "), "{ABC}");
 });
