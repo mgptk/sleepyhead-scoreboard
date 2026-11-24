@@ -26,30 +26,39 @@ logged into ESPN. **They act like a password. Never commit them or share them.**
 
 The cookies usually last about a year. Logging out of ESPN can end them early.
 If the scoreboard says "ESPN rejected the login", repeat these steps and
-update the two secrets (step 2.4 below). No code change is needed.
+update the two secrets (step 2.3 below). No code change is needed.
 
-## 2. Deploy for free on Cloudflare Pages
+## 2. Deploy for free on Cloudflare
 
-1. Create a free account at <https://dash.cloudflare.com>.
-2. **Workers & Pages** → **Create** → **Pages** → **Connect to Git**, and pick
-   this GitHub repository.
-3. Build settings:
-   - Framework preset: **None**
-   - Build command: *(leave empty)*
-   - Build output directory: `public`
-4. **Settings** → **Variables and Secrets** → add (type **Secret** for the
-   first two):
-   | Name | Value |
-   |---|---|
-   | `ESPN_S2` | your `espn_s2` cookie |
-   | `ESPN_SWID` | your `SWID` cookie |
-   | `LEAGUE_ID` | `58300197` (optional, this is the default) |
-   | `SEASON` | `2026` (optional, this is the default; change it next season) |
-5. Redeploy (Deployments → ⋯ → Retry deployment) so the secrets take effect.
-6. Share the `https://<project>.pages.dev` URL with the league.
+The repo works either as a Cloudflare **Worker** (Cloudflare's current
+default; uses `wrangler.jsonc` and `src/worker.js`) or as a **Pages** project
+(uses `functions/`, output directory `public`, no build command).
+
+1. In the Cloudflare dashboard: **Compute (Workers)** → **Workers & Pages** →
+   **Create** → import this GitHub repository. Accept the defaults
+   (deploy command `npx wrangler deploy`).
+2. The Worker's name should be `sleepyhead-scoreboard`, the same as `name`
+   in `wrangler.jsonc`. If you chose another name, change that line to match.
+3. Open the Worker → **Settings** → **Variables and Secrets** → add `ESPN_S2`
+   and `ESPN_SWID` as type **Secret**. Optional plain-text variables:
+   `LEAGUE_ID` (default `58300197`) and `SEASON` (default `2026`).
+4. Push a commit or retry the latest deployment, then open the
+   `https://…workers.dev` link from the Worker's overview page.
+
+### Checking that it works
+
+Open `https://<your-site>/api/scoreboard`:
+
+| You see | Meaning |
+|---|---|
+| JSON starting `{"leagueName":…,"teams":[…` | Working |
+| `"code":"auth"` | ESPN rejected the cookies; re-copy them |
+| `"code":"not_found"` | Wrong `LEAGUE_ID` or `SEASON` |
+| `"code":"network"` | ESPN unreachable; try again later |
+| A 404 or Cloudflare error page | The function isn't deployed; check the build log |
 
 Every push to the production branch redeploys automatically. Cloudflare's free
-plan allows 100,000 function requests a day, far more than a league needs.
+plan allows 100,000 requests a day, far more than a league needs.
 
 ## Run locally
 

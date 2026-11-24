@@ -1,0 +1,9 @@
+{
+  // Used when this repo is deployed as a Cloudflare Worker.
+  // "name" must match the Worker's name in the Cloudflare dashboard.
+  "name": "sleepyhead-scoreboard",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "observability": { "enabled": true }
+}
