@@ -52,9 +52,12 @@ Open `https://<your-site>/api/scoreboard`:
 | You see | Meaning |
 |---|---|
 | JSON starting `{"leagueName":…,"teams":[…` | Working |
-| `"code":"auth"` | ESPN rejected the cookies; re-copy them |
+| `"code":"missing_secrets"` | `ESPN_S2` / `ESPN_SWID` aren't set on the Worker, or it wasn't redeployed after adding them |
+| `"code":"auth"` | ESPN rejected the cookies; re-copy them while logged in |
+| `"code":"forbidden"` | ESPN returned 403: wrong cookies, or ESPN is blocking the server |
 | `"code":"not_found"` | Wrong `LEAGUE_ID` or `SEASON` |
 | `"code":"network"` | ESPN unreachable; try again later |
+| `diagnostics` | Safe facts for troubleshooting: whether each cookie is set, the `espn_s2` length (normally 200+), whether `SWID` looks like `{GUID}`, and ESPN's HTTP status |
 | A 404 or Cloudflare error page | The function isn't deployed; check the build log |
 
 Every push to the production branch redeploys automatically. Cloudflare's free
