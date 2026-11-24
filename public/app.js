@@ -7,6 +7,7 @@ const state = {
   data: null,
   sortKey: "points",
   sortDir: "desc",
+  mode: "current", // "current" or "projected": which Standing and W-L to show
   loading: false,
 };
 
@@ -15,14 +16,26 @@ const rowsEl = $("rows");
 const bannerEl = $("banner");
 const refreshBtn = $("refresh");
 
-function recordValue(t) {
-  const games = t.wins + t.losses + t.ties;
-  if (t.pct != null) return t.pct;
-  return games ? (t.wins + t.ties / 2) / games : 0;
+// Standing and record for the selected mode. In projected mode these include
+// this week's projected median result.
+function view(t) {
+  if (state.mode === "projected") {
+    if (t.projStanding == null) return { standing: null, wins: null, losses: null, ties: null, pct: null };
+    return { standing: t.projStanding, wins: t.projWins, losses: t.projLosses, ties: t.projTies, pct: t.projPct };
+  }
+  return { standing: t.standing, wins: t.wins, losses: t.losses, ties: t.ties, pct: t.pct };
+}
+
+function recordValue(v) {
+  if (v.wins == null) return null;
+  const games = v.wins + v.losses + v.ties;
+  if (v.pct != null) return v.pct;
+  return games ? (v.wins + v.ties / 2) / games : 0;
 }
 
 function sortValue(t, key) {
-  if (key === "record") return recordValue(t);
+  if (key === "record") return recordValue(view(t));
+  if (key === "standing") return view(t).standing;
   return t[key];
 }
 
@@ -36,7 +49,7 @@ function sortedTeams(teams, key, dir) {
     if (vb == null && va != null) return -1;
     if (va != null && vb != null && va !== vb) return (va - vb) * sign;
     // Tie-break by standings so the order is stable and sensible.
-    return (a.standing ?? 99) - (b.standing ?? 99);
+    return (view(a).standing ?? 99) - (view(b).standing ?? 99);
   });
 }
 
@@ -44,8 +57,9 @@ function fmtPoints(v) {
   return v == null ? "—" : v.toFixed(2);
 }
 
-function fmtRecord(t) {
-  return t.ties ? `${t.wins}-${t.losses}-${t.ties}` : `${t.wins}-${t.losses}`;
+function fmtRecord(v) {
+  if (v.wins == null) return "—";
+  return v.ties ? `${v.wins}-${v.losses}-${v.ties}` : `${v.wins}-${v.losses}`;
 }
 
 function initials(t) {
@@ -85,8 +99,9 @@ function renderRows() {
     team.append(logoNode(t), el("span", "name", t.name));
     team.title = t.name;
     row.append(team);
-    row.append(el("span", "c-std", t.standing == null ? "—" : String(t.standing)));
-    row.append(el("span", "c-rec", fmtRecord(t)));
+    const v = view(t);
+    row.append(el("span", "c-std", v.standing == null ? "—" : String(v.standing)));
+    row.append(el("span", "c-rec", fmtRecord(v)));
     row.append(el("span", "c-pts", fmtPoints(t.points)));
     row.append(el("span", "c-proj", fmtPoints(t.projected)));
     frag.append(row);
@@ -190,6 +205,17 @@ document.querySelectorAll(".sort").forEach((btn) => {
       state.sortDir = DEFAULT_DIR[key];
     }
     renderSortHeaders();
+    renderRows();
+  });
+});
+
+document.querySelectorAll(".segmented button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (state.mode === btn.dataset.mode) return;
+    state.mode = btn.dataset.mode;
+    document.querySelectorAll(".segmented button").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.mode === state.mode));
+    });
     renderRows();
   });
 });
