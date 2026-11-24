@@ -5,8 +5,26 @@ import { buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, no
 
 const sample = JSON.parse(readFileSync(new URL("./fixtures/sample-league.json", import.meta.url)));
 
+test("league records replace ESPN records and set standings by list order", () => {
+  const raw = {
+    status: { currentMatchupPeriod: 1 },
+    teams: [
+      { id: 1, name: "Cook\u2019n  Lamb", playoffSeed: 5, record: { overall: { wins: 3, losses: 8 } } },
+      { id: 2, name: "Not Listed", playoffSeed: 7, record: { overall: { wins: 4, losses: 7 } } },
+      { id: 3, name: "emeka edge-buka", playoffSeed: 1, record: { overall: { wins: 10, losses: 1 } } },
+    ],
+  };
+  const sb = buildScoreboard(raw);
+  const [a, b, c] = sb.teams;
+  assert.deepEqual([a.wins, a.losses, a.ties, a.standing], [9, 2, 0, 1]);
+  assert.deepEqual([b.wins, b.losses, b.standing], [4, 7, 7]); // unlisted keeps ESPN values
+  assert.deepEqual([c.wins, c.losses, c.ties, c.standing], [5, 5, 1, 6]);
+  assert.equal(c.pct, 5.5 / 11);
+  assert.equal(a.name, "Cook\u2019n  Lamb"); // name itself is unchanged
+});
+
 test("builds one row per team with standing, record and week scores", () => {
-  const sb = buildScoreboard(sample);
+  const sb = buildScoreboard(sample, []);
   assert.equal(sb.leagueName, "Sample League");
   assert.equal(sb.week, 13);
   assert.equal(sb.teams.length, 11);
