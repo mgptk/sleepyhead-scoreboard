@@ -1,6 +1,7 @@
 // Cloudflare Pages Function: GET /api/scoreboard
 //
-// Required secrets (Pages project → Settings → Variables and Secrets):
+// Required secrets (Worker or Pages project → Settings → Variables and Secrets,
+// NOT Settings → Build → Variables and secrets, which only exist during builds):
 //   ESPN_S2    – the espn_s2 cookie from a logged-in browser
 //   ESPN_SWID  – the SWID cookie (with or without curly braces)
 // Optional variables:
@@ -31,12 +32,27 @@ function json(body, status = 200) {
   });
 }
 
+// Look up a setting by name, ignoring case and stray spaces in the name, so
+// "espn_s2" or "ESPN_S2 " still work.
+function setting(env, ...names) {
+  const wanted = names.map((n) => n.toLowerCase());
+  for (const [k, v] of Object.entries(env || {})) {
+    if (typeof v === "string" && wanted.includes(k.trim().toLowerCase())) return v;
+  }
+  return undefined;
+}
+
+// Names (never values) of settings that look ESPN-related, to spot typos.
+function relatedNames(env) {
+  return Object.keys(env || {}).filter((k) => /espn|swid|s2|league|season/i.test(k));
+}
+
 async function load(env) {
   const raw = await fetchLeague({
-    leagueId: env.LEAGUE_ID || DEFAULT_LEAGUE_ID,
-    season: env.SEASON || DEFAULT_SEASON,
-    espnS2: env.ESPN_S2,
-    swid: env.ESPN_SWID,
+    leagueId: setting(env, "LEAGUE_ID") || DEFAULT_LEAGUE_ID,
+    season: setting(env, "SEASON") || DEFAULT_SEASON,
+    espnS2: setting(env, "ESPN_S2", "ESPNS2", "S2"),
+    swid: setting(env, "ESPN_SWID", "SWID"),
   });
   const data = buildScoreboard(raw);
   data.fetchedAt = new Date().toISOString();
@@ -44,8 +60,8 @@ async function load(env) {
 }
 
 export async function onRequestGet({ request, env, waitUntil }) {
-  const leagueId = env.LEAGUE_ID || DEFAULT_LEAGUE_ID;
-  const season = env.SEASON || DEFAULT_SEASON;
+  const leagueId = setting(env, "LEAGUE_ID") || DEFAULT_LEAGUE_ID;
+  const season = setting(env, "SEASON") || DEFAULT_SEASON;
   const key = `${leagueId}:${season}`;
   const now = Date.now();
 
@@ -84,6 +100,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
     return json(body);
   } catch (err) {
     const e = err instanceof EspnError ? err : new EspnError("Something went wrong loading scores.");
-    return json(JSON.stringify({ error: e.message, code: e.code, diagnostics: e.diagnostics }), e.status);
+    const diagnostics = e.diagnostics && { ...e.diagnostics, settingNamesFound: relatedNames(env) };
+    return json(JSON.stringify({ error: e.message, code: e.code, diagnostics }), e.status);
   }
 }
