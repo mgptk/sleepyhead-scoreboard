@@ -39,9 +39,7 @@ default; uses `wrangler.jsonc` and `src/worker.js`) or as a **Pages** project
    (deploy command `npx wrangler deploy`).
 2. The Worker's name should be `sleepyhead-scoreboard`, the same as `name`
    in `wrangler.jsonc`. If you chose another name, change that line to match.
-3. Open the Worker → **Settings** → **Variables and Secrets** (not the
-   similarly named section under **Settings → Build**, which only applies
-   while building) → add `ESPN_S2`
+3. Open the Worker → **Settings** → **Variables and Secrets** → add `ESPN_S2`
    and `ESPN_SWID` as type **Secret**. Optional plain-text variables:
    `LEAGUE_ID` (default `58300197`) and `SEASON` (default `2026`).
 4. Push a commit or retry the latest deployment, then open the
