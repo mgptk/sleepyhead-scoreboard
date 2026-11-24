@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121213" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="referrer" content="no-referrer">
+  <title>Scoreboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a6ef5'/%3E%3Cpath d='M9 22V10h3v12zm5 0V14h3v8zm5 0v-5h3v5z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">
+        <h1 id="league-name">Scoreboard</h1>
+        <p id="subtitle" class="subtitle">Loading…</p>
+      </div>
+      <button id="refresh" class="refresh" type="button" aria-label="Refresh scores">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M20 12a8 8 0 1 1-2.34-5.66" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Refresh</span>
+      </button>
+    </header>
+
+    <main class="board" aria-live="polite">
+      <div class="row head" role="row">
+        <span class="c-idx" aria-label="Row">#</span>
+        <span class="c-team">Team</span>
+        <button class="c-std sort" data-key="standing" type="button" aria-label="Standing"><span class="lbl-short">Std</span><span class="lbl-long">Standing</span></button>
+        <button class="c-rec sort" data-key="record" type="button" aria-label="Record"><span class="lbl-short">W-L</span><span class="lbl-long">Record</span></button>
+        <button class="c-pts sort" data-key="points" type="button" aria-label="Points"><span class="lbl-short">Pts</span><span class="lbl-long">Points</span></button>
+        <button class="c-proj sort" data-key="projected" type="button">Proj</button>
+      </div>
+      <div id="banner" class="banner" hidden></div>
+      <div id="rows" class="rows"></div>
+    </main>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
