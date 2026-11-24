@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
+import { addProjections, buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
 
 const sample = JSON.parse(readFileSync(new URL("./fixtures/sample-league.json", import.meta.url)));
 
@@ -84,4 +84,36 @@ test("cleans up pasted cookie values", () => {
   assert.equal(normalizeEspnS2("AEB+x/y="), "AEB%2Bx%2Fy%3D"); // decoded copy gets re-encoded
   assert.equal(normalizeSwid("SWID={ABC}"), "{ABC}");
   assert.equal(normalizeSwid(" 'ABC' "), "{ABC}");
+});
+
+test("projects this week's median result, record and standing", () => {
+  const sb = buildScoreboard(sample, []);
+  const byId = Object.fromEntries(sb.teams.map((t) => [t.id, t]));
+  const outcomes = sb.teams.map((t) => t.projOutcome);
+  assert.equal(outcomes.filter((o) => o === "W").length, 5);
+  assert.equal(outcomes.filter((o) => o === "L").length, 5);
+  assert.equal(outcomes.filter((o) => o === "T").length, 1);
+  assert.equal(byId[8].projOutcome, "W"); // highest projection (130.2)
+  assert.equal(byId[5].projOutcome, "T"); // median projection (112.4)
+  assert.equal(byId[9].projOutcome, "L"); // lowest projection (92.8)
+  assert.deepEqual([byId[5].projWins, byId[5].projLosses, byId[5].projTies], [5, 7, 1]);
+  assert.deepEqual([byId[3].projWins, byId[3].projLosses, byId[3].projStanding], [10, 3, 1]);
+  assert.deepEqual(sb.teams.map((t) => t.projStanding).sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+});
+
+test("projected standing ties are broken by current standing", () => {
+  const t = (id, standing, projected) => ({ id, standing, projected, wins: 5, losses: 5, ties: 0 });
+  const teams = addProjections([t(1, 2, 100), t(2, 1, 90), t(3, 3, 80)]);
+  // 1 wins, 2 ties (median), 3 loses
+  assert.deepEqual(teams.map((x) => x.projOutcome), ["W", "T", "L"]);
+  assert.deepEqual(teams.map((x) => x.projStanding), [1, 2, 3]);
+  const even = addProjections([t(1, 1, 50), t(2, 2, 60)]);
+  assert.deepEqual(even.map((x) => x.projOutcome), ["L", "W"]);
+  assert.deepEqual(even.map((x) => x.projStanding), [2, 1]);
+});
+
+test("no projections means no projected values", () => {
+  const teams = addProjections([{ id: 1, standing: 1, projected: null, wins: 1, losses: 0, ties: 0 }]);
+  assert.equal(teams[0].projStanding, null);
+  assert.equal(teams[0].projOutcome, null);
 });
