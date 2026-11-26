@@ -19,6 +19,7 @@ import {
   ROSTER_VIEWS,
   fetchNflGames,
   gameStates,
+  gameRemaining,
   hasRosters,
   buildActivePlayers,
 } from "../../lib/espn.js";
@@ -70,7 +71,8 @@ async function load(env) {
       data.teams,
       states,
       rosterRaw.scoringPeriodId ?? scoringPeriodId,
-      week
+      week,
+      gameRemaining(nflRaw)
     );
   } catch {
     data.activePlayers = null;
