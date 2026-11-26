@@ -182,13 +182,725 @@
         "teamId": 1,
         "totalPoints": 87,
         "totalPointsLive": 87.42,
-        "totalProjectedPointsLive": 118.3
+        "totalProjectedPointsLive": 118.3,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1000,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.58,
+                "player": {
+                  "id": 1000,
+                  "fullName": "Andre Holloway",
+                  "proTeamId": 24,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.58
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1001,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.83,
+                "player": {
+                  "id": 1001,
+                  "fullName": "Darius Ivers",
+                  "proTeamId": 18,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.83
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.65
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1002,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 13.97,
+                "player": {
+                  "id": 1002,
+                  "fullName": "Evan Holloway",
+                  "proTeamId": 12,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.97
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1003,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 15.79,
+                "player": {
+                  "id": 1003,
+                  "fullName": "Tyler Greer",
+                  "proTeamId": 15,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.79
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.16
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1004,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 23.12,
+                "player": {
+                  "id": 1004,
+                  "fullName": "Jalen Kowalski",
+                  "proTeamId": 30,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 23.12
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.45
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1005,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.21,
+                "player": {
+                  "id": 1005,
+                  "fullName": "Trey Lowery",
+                  "proTeamId": 30,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.21
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.77
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1006,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.43,
+                "player": {
+                  "id": 1006,
+                  "fullName": "Evan Lindqvist",
+                  "proTeamId": 5,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.43
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.44
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1007,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.77,
+                "player": {
+                  "id": 1007,
+                  "fullName": "Sample D/ST 1007",
+                  "proTeamId": 10,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.77
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.95
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1008,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 16.19,
+                "player": {
+                  "id": 1008,
+                  "fullName": "Cole Kimbrough",
+                  "proTeamId": 2,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.19
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.75
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1009,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.86,
+                "player": {
+                  "id": 1009,
+                  "fullName": "Dante Sutton",
+                  "proTeamId": 7,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.86
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.47
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1010,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.55,
+                "player": {
+                  "id": 1010,
+                  "fullName": "Caleb Lindqvist",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.18
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       },
       "away": {
         "teamId": 2,
         "totalPoints": 64,
         "totalPointsLive": 64.1,
-        "totalProjectedPointsLive": 109.6
+        "totalProjectedPointsLive": 109.6,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1011,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.77,
+                "player": {
+                  "id": 1011,
+                  "fullName": "Devon Sutton",
+                  "proTeamId": 10,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.77
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.49
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1012,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.51,
+                "player": {
+                  "id": 1012,
+                  "fullName": "Mason Kowalski",
+                  "proTeamId": 20,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.51
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.29
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1013,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.45,
+                "player": {
+                  "id": 1013,
+                  "fullName": "Owen Kimbrough",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.45
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.66
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1014,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 10.62,
+                "player": {
+                  "id": 1014,
+                  "fullName": "Dante Greer",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.62
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1015,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 9.85,
+                "player": {
+                  "id": 1015,
+                  "fullName": "Andre Delacroix",
+                  "proTeamId": 12,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.85
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.93
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1016,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.72,
+                "player": {
+                  "id": 1016,
+                  "fullName": "Darius Kimbrough",
+                  "proTeamId": 4,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.72
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.61
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1017,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2,
+                "player": {
+                  "id": 1017,
+                  "fullName": "Rashad Castillo",
+                  "proTeamId": 3,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 18.38
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1018,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 6.75,
+                "player": {
+                  "id": 1018,
+                  "fullName": "Sample D/ST 1018",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.75
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.92
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1019,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.13,
+                "player": {
+                  "id": 1019,
+                  "fullName": "Trey Brennan",
+                  "proTeamId": 30,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.13
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.89
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1020,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 24.55,
+                "player": {
+                  "id": 1020,
+                  "fullName": "Grant Lowery",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 24.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1021,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.11,
+                "player": {
+                  "id": 1021,
+                  "fullName": "Chris Okafor",
+                  "proTeamId": 1,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.11
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.51
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {
@@ -197,13 +909,725 @@
         "teamId": 3,
         "totalPoints": 102,
         "totalPointsLive": 102.36,
-        "totalProjectedPointsLive": 124.9
+        "totalProjectedPointsLive": 124.9,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1022,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.65,
+                "player": {
+                  "id": 1022,
+                  "fullName": "Cole Mayfield",
+                  "proTeamId": 23,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.65
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.34
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1023,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.35,
+                "player": {
+                  "id": 1023,
+                  "fullName": "Chris Abernathy",
+                  "proTeamId": 29,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.35
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1024,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.99,
+                "player": {
+                  "id": 1024,
+                  "fullName": "Marcus Lowery",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.99
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.37
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1025,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.6,
+                "player": {
+                  "id": 1025,
+                  "fullName": "Hunter Castillo",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.6
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.44
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1026,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.66,
+                "player": {
+                  "id": 1026,
+                  "fullName": "Andre Holloway",
+                  "proTeamId": 7,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.66
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.31
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1027,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.97,
+                "player": {
+                  "id": 1027,
+                  "fullName": "Darius Hastings",
+                  "proTeamId": 23,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.97
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.29
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1028,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.55,
+                "player": {
+                  "id": 1028,
+                  "fullName": "Jalen Lowery",
+                  "proTeamId": 5,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.96
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1029,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 19.7,
+                "player": {
+                  "id": 1029,
+                  "fullName": "Sample D/ST 1029",
+                  "proTeamId": 2,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.7
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1030,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 23.71,
+                "player": {
+                  "id": 1030,
+                  "fullName": "Jordan Merritt",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 23.71
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.66
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1031,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.61,
+                "player": {
+                  "id": 1031,
+                  "fullName": "Cole Kimbrough",
+                  "proTeamId": 13,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.61
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.39
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1032,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.79,
+                "player": {
+                  "id": 1032,
+                  "fullName": "Grant Delacroix",
+                  "proTeamId": 12,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.79
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       },
       "away": {
         "teamId": 4,
         "totalPoints": 45,
         "totalPointsLive": 45.8,
-        "totalProjectedPointsLive": 98.2
+        "totalProjectedPointsLive": 98.2,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1033,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.85,
+                "player": {
+                  "id": 1033,
+                  "fullName": "Mason Hastings",
+                  "proTeamId": 14,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.85
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.43
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1034,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.61,
+                "player": {
+                  "id": 1034,
+                  "fullName": "Jordan Merritt",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.61
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.97
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1035,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 24.99,
+                "player": {
+                  "id": 1035,
+                  "fullName": "Devon Fontaine",
+                  "proTeamId": 5,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 24.99
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.44
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1036,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 9.32,
+                "player": {
+                  "id": 1036,
+                  "fullName": "Darius Lowery",
+                  "proTeamId": 16,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.32
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.95
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1037,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.59,
+                "player": {
+                  "id": 1037,
+                  "fullName": "Devon Greer",
+                  "proTeamId": 17,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.59
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.74
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1038,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 9.39,
+                "player": {
+                  "id": 1038,
+                  "fullName": "Darius Abernathy",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.39
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.23
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1039,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.05,
+                "player": {
+                  "id": 1039,
+                  "fullName": "Dante Holloway",
+                  "proTeamId": 24,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.05
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.52
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1040,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.58,
+                "player": {
+                  "id": 1040,
+                  "fullName": "Sample D/ST 1040",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.58
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.82
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1041,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.12,
+                "player": {
+                  "id": 1041,
+                  "fullName": "Darius Jett",
+                  "proTeamId": 30,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.12
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.58
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1042,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 19.26,
+                "player": {
+                  "id": 1042,
+                  "fullName": "Jordan Whitfield",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.26
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.2
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1043,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.21,
+                "player": {
+                  "id": 1043,
+                  "fullName": "Grant Whitfield",
+                  "proTeamId": 5,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.21
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {
@@ -212,13 +1636,725 @@
         "teamId": 5,
         "totalPoints": 71,
         "totalPointsLive": 71,
-        "totalProjectedPointsLive": 112.4
+        "totalProjectedPointsLive": 112.4,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1044,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.55,
+                "player": {
+                  "id": 1044,
+                  "fullName": "Tyler Whitfield",
+                  "proTeamId": 20,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.61
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1045,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.62,
+                "player": {
+                  "id": 1045,
+                  "fullName": "Jalen Holloway",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.62
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.91
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1046,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.39,
+                "player": {
+                  "id": 1046,
+                  "fullName": "Jordan Sutton",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.39
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.87
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1047,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 9.72,
+                "player": {
+                  "id": 1047,
+                  "fullName": "Rashad Okafor",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.72
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.49
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1048,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 24.76,
+                "player": {
+                  "id": 1048,
+                  "fullName": "Devon Lowery",
+                  "proTeamId": 17,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 24.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 18.15
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1049,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.31,
+                "player": {
+                  "id": 1049,
+                  "fullName": "Brandon Castillo",
+                  "proTeamId": 3,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.31
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.44
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1050,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 6.74,
+                "player": {
+                  "id": 1050,
+                  "fullName": "Trey Mayfield",
+                  "proTeamId": 34,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.74
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.45
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1051,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.03,
+                "player": {
+                  "id": 1051,
+                  "fullName": "Sample D/ST 1051",
+                  "proTeamId": 11,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.03
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.5
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1052,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.02,
+                "player": {
+                  "id": 1052,
+                  "fullName": "Rashad Okafor",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.08
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1053,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 22.29,
+                "player": {
+                  "id": 1053,
+                  "fullName": "Darius Sutton",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 22.29
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.48
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1054,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 23.83,
+                "player": {
+                  "id": 1054,
+                  "fullName": "Isaiah Delacroix",
+                  "proTeamId": 12,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 23.83
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.25
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       },
       "away": {
         "teamId": 6,
         "totalPoints": 93,
         "totalPointsLive": 93.24,
-        "totalProjectedPointsLive": 121.7
+        "totalProjectedPointsLive": 121.7,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1055,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 7.05,
+                "player": {
+                  "id": 1055,
+                  "fullName": "Owen Delacroix",
+                  "proTeamId": 24,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.05
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.14
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1056,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 13.55,
+                "player": {
+                  "id": 1056,
+                  "fullName": "Cole Kimbrough",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.3
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1057,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 13.35,
+                "player": {
+                  "id": 1057,
+                  "fullName": "Owen Merritt",
+                  "proTeamId": 34,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.35
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1058,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.02,
+                "player": {
+                  "id": 1058,
+                  "fullName": "Mason Kimbrough",
+                  "proTeamId": 23,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.16
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1059,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 22.41,
+                "player": {
+                  "id": 1059,
+                  "fullName": "Darius Holloway",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 22.41
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1060,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.62,
+                "player": {
+                  "id": 1060,
+                  "fullName": "Hunter Jett",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.62
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.97
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1061,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.18,
+                "player": {
+                  "id": 1061,
+                  "fullName": "Rashad Kimbrough",
+                  "proTeamId": 19,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.18
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.23
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1062,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 7.38,
+                "player": {
+                  "id": 1062,
+                  "fullName": "Sample D/ST 1062",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.38
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.47
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1063,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.91,
+                "player": {
+                  "id": 1063,
+                  "fullName": "Devon Delacroix",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.91
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.68
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1064,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 22.99,
+                "player": {
+                  "id": 1064,
+                  "fullName": "Mason Greer",
+                  "proTeamId": 29,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 22.99
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1065,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.86,
+                "player": {
+                  "id": 1065,
+                  "fullName": "Hunter Whitfield",
+                  "proTeamId": 5,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.86
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.32
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {
@@ -227,13 +2363,725 @@
         "teamId": 7,
         "totalPoints": 58,
         "totalPointsLive": 58.62,
-        "totalProjectedPointsLive": 101.5
+        "totalProjectedPointsLive": 101.5,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1066,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.3,
+                "player": {
+                  "id": 1066,
+                  "fullName": "Isaiah Kimbrough",
+                  "proTeamId": 6,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.3
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.95
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1067,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.28,
+                "player": {
+                  "id": 1067,
+                  "fullName": "Isaiah Castillo",
+                  "proTeamId": 4,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.28
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.24
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1068,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.32,
+                "player": {
+                  "id": 1068,
+                  "fullName": "Evan Delacroix",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.32
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.53
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1069,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.11,
+                "player": {
+                  "id": 1069,
+                  "fullName": "Cole Merritt",
+                  "proTeamId": 18,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.11
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.56
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1070,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.98,
+                "player": {
+                  "id": 1070,
+                  "fullName": "Cole Hastings",
+                  "proTeamId": 20,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1071,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.25,
+                "player": {
+                  "id": 1071,
+                  "fullName": "Brandon Holloway",
+                  "proTeamId": 19,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.25
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.01
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1072,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.19,
+                "player": {
+                  "id": 1072,
+                  "fullName": "Brandon Fontaine",
+                  "proTeamId": 27,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.19
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1073,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.61,
+                "player": {
+                  "id": 1073,
+                  "fullName": "Sample D/ST 1073",
+                  "proTeamId": 2,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.61
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.79
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1074,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 9,
+                "player": {
+                  "id": 1074,
+                  "fullName": "Darius Greer",
+                  "proTeamId": 26,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.81
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1075,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.26,
+                "player": {
+                  "id": 1075,
+                  "fullName": "Dante Jett",
+                  "proTeamId": 14,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.26
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.09
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1076,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 21.4,
+                "player": {
+                  "id": 1076,
+                  "fullName": "Cole Lowery",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.4
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.33
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       },
       "away": {
         "teamId": 8,
         "totalPoints": 110,
         "totalPointsLive": 110.5,
-        "totalProjectedPointsLive": 130.2
+        "totalProjectedPointsLive": 130.2,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1077,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 5.85,
+                "player": {
+                  "id": 1077,
+                  "fullName": "Devon Brennan",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.85
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.81
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1078,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.67,
+                "player": {
+                  "id": 1078,
+                  "fullName": "Tyler Pruitt",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.67
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.1
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1079,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 25.98,
+                "player": {
+                  "id": 1079,
+                  "fullName": "Andre Castillo",
+                  "proTeamId": 1,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 25.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.4
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1080,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.93,
+                "player": {
+                  "id": 1080,
+                  "fullName": "Jalen Lindqvist",
+                  "proTeamId": 16,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.93
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.4
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1081,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.5,
+                "player": {
+                  "id": 1081,
+                  "fullName": "Marcus Okafor",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.5
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.54
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1082,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.85,
+                "player": {
+                  "id": 1082,
+                  "fullName": "Cole Kowalski",
+                  "proTeamId": 23,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.85
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.36
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1083,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.38,
+                "player": {
+                  "id": 1083,
+                  "fullName": "Jordan Ivers",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.38
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1084,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 13.71,
+                "player": {
+                  "id": 1084,
+                  "fullName": "Sample D/ST 1084",
+                  "proTeamId": 26,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.71
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.23
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1085,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.5,
+                "player": {
+                  "id": 1085,
+                  "fullName": "Cole Fontaine",
+                  "proTeamId": 14,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.5
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 5.42
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1086,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 6.99,
+                "player": {
+                  "id": 1086,
+                  "fullName": "Owen Brennan",
+                  "proTeamId": 3,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.99
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.9
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1087,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1.78,
+                "player": {
+                  "id": 1087,
+                  "fullName": "Mason Holloway",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1.78
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.58
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {
@@ -242,13 +3090,725 @@
         "teamId": 9,
         "totalPoints": 39,
         "totalPointsLive": 39.9,
-        "totalProjectedPointsLive": 92.8
+        "totalProjectedPointsLive": 92.8,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1088,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.33,
+                "player": {
+                  "id": 1088,
+                  "fullName": "Marcus Jett",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.33
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.51
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1089,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.11,
+                "player": {
+                  "id": 1089,
+                  "fullName": "Mason Sutton",
+                  "proTeamId": 30,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.11
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.89
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1090,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.29,
+                "player": {
+                  "id": 1090,
+                  "fullName": "Jordan Holloway",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.29
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.94
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1091,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.49,
+                "player": {
+                  "id": 1091,
+                  "fullName": "Devon Ivers",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.49
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.55
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1092,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 8.38,
+                "player": {
+                  "id": 1092,
+                  "fullName": "Evan Lindqvist",
+                  "proTeamId": 15,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 8.38
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1093,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.83,
+                "player": {
+                  "id": 1093,
+                  "fullName": "Grant Kimbrough",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.83
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1094,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.52,
+                "player": {
+                  "id": 1094,
+                  "fullName": "Evan Jett",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.52
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.97
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1095,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 20.72,
+                "player": {
+                  "id": 1095,
+                  "fullName": "Sample D/ST 1095",
+                  "proTeamId": 10,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 20.72
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 21.41
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1096,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 7.37,
+                "player": {
+                  "id": 1096,
+                  "fullName": "Grant Castillo",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.37
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.24
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1097,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 17.33,
+                "player": {
+                  "id": 1097,
+                  "fullName": "Owen Ivers",
+                  "proTeamId": 27,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.33
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.17
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1098,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.92,
+                "player": {
+                  "id": 1098,
+                  "fullName": "Devon Whitfield",
+                  "proTeamId": 19,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.92
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.85
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       },
       "away": {
         "teamId": 10,
         "totalPoints": 76,
         "totalPointsLive": 76.18,
-        "totalProjectedPointsLive": 115
+        "totalProjectedPointsLive": 115,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1099,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 16.02,
+                "player": {
+                  "id": 1099,
+                  "fullName": "Grant Kimbrough",
+                  "proTeamId": 27,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 18.24
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1100,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.84,
+                "player": {
+                  "id": 1100,
+                  "fullName": "Owen Abernathy",
+                  "proTeamId": 18,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.84
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 6.15
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1101,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.33,
+                "player": {
+                  "id": 1101,
+                  "fullName": "Caleb Mayfield",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.33
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.02
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1102,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 17.36,
+                "player": {
+                  "id": 1102,
+                  "fullName": "Andre Pruitt",
+                  "proTeamId": 20,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.36
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 16.07
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1103,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 17.11,
+                "player": {
+                  "id": 1103,
+                  "fullName": "Trey Lindqvist",
+                  "proTeamId": 20,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.11
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.03
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1104,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 11.99,
+                "player": {
+                  "id": 1104,
+                  "fullName": "Trey Castillo",
+                  "proTeamId": 7,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 11.99
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.47
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1105,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 2.04,
+                "player": {
+                  "id": 1105,
+                  "fullName": "Brandon Kimbrough",
+                  "proTeamId": 21,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 2.04
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.37
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1106,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 4.76,
+                "player": {
+                  "id": 1106,
+                  "fullName": "Sample D/ST 1106",
+                  "proTeamId": 13,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.76
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 9.79
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1107,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.98,
+                "player": {
+                  "id": 1107,
+                  "fullName": "Tyler Mayfield",
+                  "proTeamId": 13,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.98
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 4.51
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1108,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3.4,
+                "player": {
+                  "id": 1108,
+                  "fullName": "Rashad Mayfield",
+                  "proTeamId": 4,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.4
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3.83
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1109,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 7.22,
+                "player": {
+                  "id": 1109,
+                  "fullName": "Mason Brennan",
+                  "proTeamId": 7,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.22
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 18.81
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {
@@ -257,7 +3817,363 @@
         "teamId": 11,
         "totalPoints": 0,
         "totalPointsLive": 0,
-        "totalProjectedPointsLive": 96.4
+        "totalProjectedPointsLive": 96.4,
+        "rosterForCurrentScoringPeriod": {
+          "entries": [
+            {
+              "playerId": 1110,
+              "lineupSlotId": 0,
+              "playerPoolEntry": {
+                "appliedStatTotal": 3,
+                "player": {
+                  "id": 1110,
+                  "fullName": "Brandon Delacroix",
+                  "proTeamId": 25,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 3
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.75
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1111,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.19,
+                "player": {
+                  "id": 1111,
+                  "fullName": "Grant Greer",
+                  "proTeamId": 4,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.19
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 17.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1112,
+              "lineupSlotId": 2,
+              "playerPoolEntry": {
+                "appliedStatTotal": 14.93,
+                "player": {
+                  "id": 1112,
+                  "fullName": "Grant Delacroix",
+                  "proTeamId": 33,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.93
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 14.48
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1113,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 10.88,
+                "player": {
+                  "id": 1113,
+                  "fullName": "Marcus Brennan",
+                  "proTeamId": 10,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.88
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 7.81
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1114,
+              "lineupSlotId": 4,
+              "playerPoolEntry": {
+                "appliedStatTotal": 24.05,
+                "player": {
+                  "id": 1114,
+                  "fullName": "Cole Kowalski",
+                  "proTeamId": 8,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 24.05
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 19.12
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1115,
+              "lineupSlotId": 6,
+              "playerPoolEntry": {
+                "appliedStatTotal": 13.8,
+                "player": {
+                  "id": 1115,
+                  "fullName": "Devon Jett",
+                  "proTeamId": 22,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.8
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.69
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1116,
+              "lineupSlotId": 23,
+              "playerPoolEntry": {
+                "appliedStatTotal": 18.15,
+                "player": {
+                  "id": 1116,
+                  "fullName": "Mason Whitfield",
+                  "proTeamId": 24,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 18.15
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 13.63
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1117,
+              "lineupSlotId": 16,
+              "playerPoolEntry": {
+                "appliedStatTotal": 10.57,
+                "player": {
+                  "id": 1117,
+                  "fullName": "Sample D/ST 1117",
+                  "proTeamId": 23,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.57
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.29
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1118,
+              "lineupSlotId": 17,
+              "playerPoolEntry": {
+                "appliedStatTotal": 1,
+                "player": {
+                  "id": 1118,
+                  "fullName": "Cole Merritt",
+                  "proTeamId": 28,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 1
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.63
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1119,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 12.38,
+                "player": {
+                  "id": 1119,
+                  "fullName": "Chris Fontaine",
+                  "proTeamId": 19,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 12.38
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 15.6
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "playerId": 1120,
+              "lineupSlotId": 20,
+              "playerPoolEntry": {
+                "appliedStatTotal": 0.34,
+                "player": {
+                  "id": 1120,
+                  "fullName": "Grant Greer",
+                  "proTeamId": 34,
+                  "stats": [
+                    {
+                      "statSourceId": 0,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 0.34
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 13,
+                      "appliedTotal": 10.79
+                    },
+                    {
+                      "statSourceId": 1,
+                      "statSplitTypeId": 1,
+                      "scoringPeriodId": 12,
+                      "appliedTotal": 99
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     },
     {

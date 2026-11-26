@@ -1,9 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { addProjections, buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
+import { addProjections, buildActivePlayers, gameStates, hasRosters, buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
 
 const sample = JSON.parse(readFileSync(new URL("./fixtures/sample-league.json", import.meta.url)));
+const sampleNfl = JSON.parse(readFileSync(new URL("./fixtures/sample-nfl.json", import.meta.url)));
 
 test("league records replace ESPN records and set standings by list order", () => {
   const raw = {
@@ -116,4 +117,63 @@ test("no projections means no projected values", () => {
   const teams = addProjections([{ id: 1, standing: 1, projected: null, wins: 1, losses: 0, ties: 0 }]);
   assert.equal(teams[0].projStanding, null);
   assert.equal(teams[0].projOutcome, null);
+});
+
+test("active players: starters whose NFL game is in progress", () => {
+  const states = new Map([["1", "in"], ["2", "pre"], ["3", "post"]]);
+  const player = (id, proTeamId, lineupSlotId, actual, proj) => ({
+    playerId: id,
+    lineupSlotId,
+    playerPoolEntry: {
+      appliedStatTotal: 999,
+      player: {
+        id,
+        fullName: `P${id}`,
+        proTeamId,
+        stats: [
+          { statSourceId: 0, statSplitTypeId: 1, scoringPeriodId: 5, appliedTotal: actual },
+          { statSourceId: 1, statSplitTypeId: 1, scoringPeriodId: 5, appliedTotal: proj },
+          { statSourceId: 1, statSplitTypeId: 1, scoringPeriodId: 4, appliedTotal: 50 },
+        ],
+      },
+    },
+  });
+  const raw = {
+    schedule: [
+      {
+        matchupPeriodId: 5,
+        home: {
+          teamId: 7,
+          rosterForCurrentScoringPeriod: {
+            entries: [
+              player(1, 1, 2, 12.345, 14), // in game, starter → included
+              player(2, 1, 20, 3, 4), // in game, bench → excluded
+              player(3, 1, 21, 3, 4), // in game, IR → excluded
+              player(4, 2, 2, 0, 9), // game not started → excluded
+              player(5, 3, 4, 20, 10), // game over → excluded
+            ],
+          },
+        },
+      },
+      { matchupPeriodId: 4, home: { teamId: 7, rosterForCurrentScoringPeriod: { entries: [player(9, 1, 2, 1, 1)] } } },
+    ],
+  };
+  const teams = [{ id: 7, name: "Big Dogs", abbrev: "BIG" }];
+  assert.equal(hasRosters(raw, 5), true);
+  assert.equal(hasRosters(raw, 6), false);
+  const players = buildActivePlayers(raw, teams, states, 5, 5);
+  assert.deepEqual(players, [{ id: 1, name: "P1", teamId: 7, teamAbbrev: "BIG", points: 12.35, projected: 14 }]);
+});
+
+test("game states come from the NFL scoreboard", () => {
+  const states = gameStates(sampleNfl);
+  assert.equal(states.size, 32);
+  assert.equal(states.get("1"), "in");
+  assert.equal(states.get("34"), "post");
+  const sb = buildScoreboard(sample, []);
+  const players = buildActivePlayers(sample, sb.teams, states, 13, 13);
+  assert.ok(players.length > 0);
+  assert.ok(players.every((p) => states.get(String(sample.schedule.flatMap((m) => [m.home, m.away]).filter(Boolean)
+    .flatMap((s) => s.rosterForCurrentScoringPeriod ? s.rosterForCurrentScoringPeriod.entries : [])
+    .find((e) => e.playerId === p.id).playerPoolEntry.player.proTeamId)) === "in"));
 });

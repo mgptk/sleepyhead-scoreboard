@@ -10,7 +10,16 @@
 // Responses are cached for CACHE_SECONDS so that many people pressing Refresh
 // at once only cause one request to ESPN.
 
-import { fetchLeague, buildScoreboard, EspnError } from "../../lib/espn.js";
+import {
+  fetchLeague,
+  buildScoreboard,
+  EspnError,
+  ROSTER_VIEWS,
+  fetchNflGames,
+  gameStates,
+  hasRosters,
+  buildActivePlayers,
+} from "../../lib/espn.js";
 
 const CACHE_SECONDS = 20;
 const DEFAULT_LEAGUE_ID = "58300197";
@@ -32,13 +41,36 @@ function json(body, status = 200) {
 }
 
 async function load(env) {
-  const raw = await fetchLeague({
+  const creds = {
     leagueId: env.LEAGUE_ID || DEFAULT_LEAGUE_ID,
     season: env.SEASON || DEFAULT_SEASON,
     espnS2: env.ESPN_S2,
     swid: env.ESPN_SWID,
-  });
+  };
+  const raw = await fetchLeague(creds);
   const data = buildScoreboard(raw);
+
+  // Active players. A failure here never breaks the scoreboard itself.
+  try {
+    const week = data.week;
+    const scoringPeriodId = raw.scoringPeriodId;
+    const [rosterRaw, nflRaw] = await Promise.all([
+      hasRosters(raw, week)
+        ? raw
+        : fetchLeague({ ...creds, views: ROSTER_VIEWS, scoringPeriodId, matchupPeriodId: week }),
+      fetchNflGames(),
+    ]);
+    data.activePlayers = buildActivePlayers(
+      rosterRaw,
+      data.teams,
+      gameStates(nflRaw),
+      rosterRaw.scoringPeriodId ?? scoringPeriodId,
+      week
+    );
+  } catch {
+    data.activePlayers = null;
+    data.playersError = "Live player data is unavailable right now. Try refreshing in a moment.";
+  }
   data.fetchedAt = new Date().toISOString();
   return JSON.stringify(data);
 }

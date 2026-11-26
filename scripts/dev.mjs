@@ -6,7 +6,7 @@ import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import { onRequestGet } from "../functions/api/scoreboard.js";
-import { buildScoreboard } from "../lib/espn.js";
+import { buildScoreboard, buildActivePlayers, gameStates } from "../lib/espn.js";
 
 const root = fileURLToPath(new URL("../public/", import.meta.url));
 const port = Number(process.env.PORT) || 8788;
@@ -18,7 +18,9 @@ createServer(async (req, res) => {
   if (url.pathname === "/api/scoreboard") {
     if (useSample) {
       const raw = JSON.parse(await readFile(new URL("../test/fixtures/sample-league.json", import.meta.url)));
+      const nfl = JSON.parse(await readFile(new URL("../test/fixtures/sample-nfl.json", import.meta.url)));
       const data = { ...buildScoreboard(raw), fetchedAt: new Date().toISOString(), sample: true };
+      data.activePlayers = buildActivePlayers(raw, data.teams, gameStates(nfl), raw.scoringPeriodId, data.week);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify(data));
     }

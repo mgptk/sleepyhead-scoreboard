@@ -1,0 +1,373 @@
+{
+  "_note": "Made-up sample NFL game states in the shape of ESPN scoreboard responses.",
+  "events": [
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "1"
+              }
+            },
+            {
+              "team": {
+                "id": "2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "3"
+              }
+            },
+            {
+              "team": {
+                "id": "4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "5"
+              }
+            },
+            {
+              "team": {
+                "id": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "7"
+              }
+            },
+            {
+              "team": {
+                "id": "8"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "9"
+              }
+            },
+            {
+              "team": {
+                "id": "10"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "in"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "11"
+              }
+            },
+            {
+              "team": {
+                "id": "12"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "pre"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "13"
+              }
+            },
+            {
+              "team": {
+                "id": "14"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "pre"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "15"
+              }
+            },
+            {
+              "team": {
+                "id": "16"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "pre"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "17"
+              }
+            },
+            {
+              "team": {
+                "id": "18"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "pre"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "19"
+              }
+            },
+            {
+              "team": {
+                "id": "20"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "21"
+              }
+            },
+            {
+              "team": {
+                "id": "22"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "23"
+              }
+            },
+            {
+              "team": {
+                "id": "24"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "25"
+              }
+            },
+            {
+              "team": {
+                "id": "26"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "27"
+              }
+            },
+            {
+              "team": {
+                "id": "28"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "29"
+              }
+            },
+            {
+              "team": {
+                "id": "30"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "competitions": [
+        {
+          "status": {
+            "type": {
+              "state": "post"
+            }
+          },
+          "competitors": [
+            {
+              "team": {
+                "id": "33"
+              }
+            },
+            {
+              "team": {
+                "id": "34"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
