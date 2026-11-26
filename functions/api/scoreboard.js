@@ -7,18 +7,30 @@
 //   LEAGUE_ID  – defaults to 58300197
 //   SEASON     – defaults to 2026
 //
-// Responses are cached for CACHE_SECONDS so that many people pressing Refresh
-// at once only cause one request to ESPN.
+// Responses are cached briefly so that many people refreshing at once only
+// cause one round of requests to ESPN: LIVE_CACHE_SECONDS while an NFL game is
+// in progress (the page refreshes every 5 seconds then), IDLE_CACHE_SECONDS
+// otherwise.
 
-import { fetchLeague, buildScoreboard, EspnError } from "../../lib/espn.js";
+import {
+  fetchLeague,
+  buildScoreboard,
+  EspnError,
+  ROSTER_VIEWS,
+  fetchNflGames,
+  gameStates,
+  hasRosters,
+  buildActivePlayers,
+} from "../../lib/espn.js";
 
-const CACHE_SECONDS = 20;
+const LIVE_CACHE_SECONDS = 4;
+const IDLE_CACHE_SECONDS = 30;
 const DEFAULT_LEAGUE_ID = "58300197";
 const DEFAULT_SEASON = "2026";
 
 // Per-isolate memory cache plus in-flight request sharing. Backed up by the
 // Cloudflare Cache API, which is shared across isolates in a data center.
-let memo = null; // { key, expires, body }
+let memo = null; // { key, expires, body, ttl }
 let inflight = null; // { key, promise }
 
 function json(body, status = 200) {
@@ -32,15 +44,41 @@ function json(body, status = 200) {
 }
 
 async function load(env) {
-  const raw = await fetchLeague({
+  const creds = {
     leagueId: env.LEAGUE_ID || DEFAULT_LEAGUE_ID,
     season: env.SEASON || DEFAULT_SEASON,
     espnS2: env.ESPN_S2,
     swid: env.ESPN_SWID,
-  });
+  };
+  const raw = await fetchLeague(creds);
   const data = buildScoreboard(raw);
+
+  // Active players. A failure here never breaks the scoreboard itself.
+  try {
+    const week = data.week;
+    const scoringPeriodId = raw.scoringPeriodId;
+    const [rosterRaw, nflRaw] = await Promise.all([
+      hasRosters(raw, week)
+        ? raw
+        : fetchLeague({ ...creds, views: ROSTER_VIEWS, scoringPeriodId, matchupPeriodId: week }),
+      fetchNflGames(),
+    ]);
+    const states = gameStates(nflRaw);
+    data.gameActive = [...states.values()].includes("in");
+    data.activePlayers = buildActivePlayers(
+      rosterRaw,
+      data.teams,
+      states,
+      rosterRaw.scoringPeriodId ?? scoringPeriodId,
+      week
+    );
+  } catch {
+    data.activePlayers = null;
+    data.gameActive = null;
+    data.playersError = "Live player data is unavailable right now. Try refreshing in a moment.";
+  }
   data.fetchedAt = new Date().toISOString();
-  return JSON.stringify(data);
+  return { body: JSON.stringify(data), ttl: data.gameActive ? LIVE_CACHE_SECONDS : IDLE_CACHE_SECONDS };
 }
 
 export async function onRequestGet({ request, env, waitUntil }) {
@@ -58,7 +96,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
       const hit = await cache.match(cacheKey);
       if (hit) {
         const body = await hit.text();
-        memo = { key, expires: now + CACHE_SECONDS * 1000, body };
+        memo = { key, expires: now + LIVE_CACHE_SECONDS * 1000, body };
         return json(body);
       }
     } catch {
@@ -73,11 +111,11 @@ export async function onRequestGet({ request, env, waitUntil }) {
         if (inflight && inflight.key === key) inflight = null;
       }).catch(() => {});
     }
-    const body = await inflight.promise;
-    memo = { key, expires: Date.now() + CACHE_SECONDS * 1000, body };
+    const { body, ttl } = await inflight.promise;
+    memo = { key, expires: Date.now() + ttl * 1000, body };
     if (cache) {
       const put = cache
-        .put(cacheKey, new Response(body, { headers: { "Cache-Control": `max-age=${CACHE_SECONDS}` } }))
+        .put(cacheKey, new Response(body, { headers: { "Cache-Control": `max-age=${ttl}` } }))
         .catch(() => {});
       if (waitUntil) waitUntil(put);
     }

@@ -32,16 +32,25 @@
         <button type="button" data-mode="current" aria-pressed="true">Current</button>
         <button type="button" data-mode="projected" aria-pressed="false">Projected</button>
       </div>
+      <button id="players-toggle" class="players-btn" type="button" aria-pressed="false">
+        <span class="live-dot" aria-hidden="true"></span>Active Players
+      </button>
     </div>
 
-    <main class="board" aria-live="polite">
-      <div class="row head" role="row">
+    <main id="board" class="board" aria-live="polite">
+      <div class="row head teams-head" role="row">
         <span class="c-idx" aria-label="Row">#</span>
         <span class="c-team">Team</span>
         <button class="c-std sort" data-key="standing" type="button" aria-label="Standing"><span class="lbl-short">Std</span><span class="lbl-long">Standing</span></button>
         <button class="c-rec sort" data-key="record" type="button" aria-label="Record"><span class="lbl-short">W-L</span><span class="lbl-long">Record</span></button>
         <button class="c-pts sort" data-key="points" type="button" aria-label="Points"><span class="lbl-short">Pts</span><span class="lbl-long">Points</span></button>
         <button class="c-proj sort" data-key="projected" type="button">Proj</button>
+      </div>
+      <div class="row head players-head" role="row" hidden>
+        <span class="c-player">Player</span>
+        <span class="c-fteam">Team</span>
+        <button class="c-pts sort" data-pkey="points" type="button">Score</button>
+        <button class="c-proj sort" data-pkey="projected" type="button">Projected</button>
       </div>
       <div id="banner" class="banner" hidden></div>
       <div id="rows" class="rows"></div>
