@@ -5,6 +5,11 @@ const API_URL = "/api/scoreboard";
 const LIVE_REFRESH_MS = 5000;
 const IDLE_REFRESH_MS = 60000;
 
+// Header title, and the offset from ESPN's week number to the week shown
+// (ESPN week 12 is shown as Week 1).
+const TITLE = "Splooge Week";
+const WEEK_OFFSET = 11;
+
 // Default sort direction for each sortable column.
 const DEFAULT_DIR = { standing: "asc", record: "desc", points: "desc", projected: "desc" };
 
@@ -211,15 +216,14 @@ function renderSortHeaders() {
 function renderHeader() {
   const d = state.data;
   if (!d) return;
-  $("league-name").textContent = d.leagueName;
-  document.title = d.leagueName;
+  $("league-name").textContent = TITLE;
+  document.title = TITLE;
   const parts = [];
-  if (d.week != null) parts.push(`Week ${d.week}`);
+  if (d.week != null) parts.push(`Week ${d.week - WEEK_OFFSET}`);
   if (d.fetchedAt) {
     const t = new Date(d.fetchedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
     parts.push(`Updated ${t}`);
   }
-  if (d.gameActive) parts.push("Live");
   if (d.sample) parts.push("Sample data");
   // One span per part so a narrow screen wraps between parts, not inside one.
   const nodes = [];
