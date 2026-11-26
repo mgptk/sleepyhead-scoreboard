@@ -73,13 +73,13 @@ button { font: inherit; color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px var(--pad) 10px calc(var(--pad) + 2px);
+  padding: 8px var(--pad) 8px calc(var(--pad) + 2px);
   background: var(--surface);
   border-bottom: 1px solid var(--divider);
   flex: none;
 }
-.title { min-width: 0; }
-.title h1 {
+.topbar h1 {
+  min-width: 0;
   margin: 0;
   font-size: 18px;
   font-weight: 700;
@@ -89,33 +89,15 @@ button { font: inherit; color: inherit; }
   text-overflow: ellipsis;
 }
 .subtitle {
-  margin: 2px 0 0;
+  flex: 0 1 auto;
+  max-width: 55%;
+  margin: 0;
   font-size: 12px;
+  line-height: 1.35;
   color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: right;
 }
-.refresh {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  flex: none;
-  height: 36px;
-  padding: 0 14px 0 11px;
-  border: 0;
-  border-radius: 18px;
-  background: var(--accent);
-  color: var(--accent-text);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-.refresh:active { transform: scale(0.97); }
-.refresh:disabled { opacity: 0.7; cursor: default; }
-.refresh.loading svg { animation: spin 0.8s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.meta-part { white-space: nowrap; }
 
 /* Current / Projected toggle */
 .modebar {
@@ -288,6 +270,15 @@ button { font: inherit; color: inherit; }
   color: var(--muted);
   border: 1px solid var(--divider);
 }
+.team-text { display: flex; flex-direction: column; min-width: 0; }
+.abbr {
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .name {
   font-size: 14px;
   font-weight: 600;
@@ -326,8 +317,6 @@ button { font: inherit; color: inherit; }
   .rows .c-proj { font-size: 12px; }
   .rows .c-rec { font-size: 11px; }
   .row.head { font-size: 10px; }
-  .refresh span { display: none; }
-  .refresh { padding: 0 8px; width: 36px; justify-content: center; }
 }
 
 @media (min-width: 420px) {

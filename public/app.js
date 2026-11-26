@@ -23,7 +23,6 @@ const state = {
 const $ = (id) => document.getElementById(id);
 const rowsEl = $("rows");
 const bannerEl = $("banner");
-const refreshBtn = $("refresh");
 const boardEl = $("board");
 const playersBtn = $("players-toggle");
 
@@ -107,7 +106,10 @@ function renderRows() {
     row.setAttribute("role", "row");
     row.append(el("span", "c-idx", String(i + 1)));
     const team = el("span", "c-team");
-    team.append(logoNode(t), el("span", "name", t.name));
+    const text = el("span", "team-text");
+    text.append(el("span", "name", t.name));
+    if (t.abbrev) text.append(el("span", "abbr", t.abbrev));
+    team.append(logoNode(t), text);
     team.title = t.name;
     row.append(team);
     const v = view(t);
@@ -219,7 +221,13 @@ function renderHeader() {
   }
   if (d.gameActive) parts.push("Live");
   if (d.sample) parts.push("Sample data");
-  $("subtitle").textContent = parts.join(" · ");
+  // One span per part so a narrow screen wraps between parts, not inside one.
+  const nodes = [];
+  parts.forEach((p, i) => {
+    if (i) nodes.push(document.createTextNode(" · "));
+    nodes.push(el("span", "meta-part", p));
+  });
+  $("subtitle").replaceChildren(...nodes);
 }
 
 function showBanner(message, kind = "error") {
@@ -233,26 +241,18 @@ function showBanner(message, kind = "error") {
   bannerEl.hidden = false;
 }
 
-function setLoading(on) {
-  state.loading = on;
-  refreshBtn.disabled = on;
-  refreshBtn.classList.toggle("loading", on);
-}
-
 function scheduleRefresh() {
   clearTimeout(state.timer);
   state.timer = null;
   if (document.hidden) return; // paused while the page isn't visible
   const delay = state.data && state.data.gameActive ? LIVE_REFRESH_MS : IDLE_REFRESH_MS;
-  state.timer = setTimeout(() => load({ quiet: true }), delay);
+  state.timer = setTimeout(load, delay);
 }
 
-// quiet: automatic refresh, without the spinning Refresh button.
-async function load({ quiet = false } = {}) {
+async function load() {
   if (state.loading) return;
   clearTimeout(state.timer);
   state.loading = true;
-  if (!quiet) setLoading(true);
   if (!state.data) renderSkeleton();
   try {
     const res = await fetch(API_URL, { cache: "no-store" });
@@ -274,7 +274,6 @@ async function load({ quiet = false } = {}) {
     }
   } finally {
     state.loading = false;
-    setLoading(false);
     scheduleRefresh();
   }
 }
@@ -321,14 +320,13 @@ document.querySelectorAll(".segmented button").forEach((btn) => {
 
 playersBtn.addEventListener("click", () => setView(state.view === "players" ? "teams" : "players"));
 
-refreshBtn.addEventListener("click", () => load());
 
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     clearTimeout(state.timer);
     state.timer = null;
   } else {
-    load({ quiet: true });
+    load();
   }
 });
 
