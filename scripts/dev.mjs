@@ -20,7 +20,9 @@ createServer(async (req, res) => {
       const raw = JSON.parse(await readFile(new URL("../test/fixtures/sample-league.json", import.meta.url)));
       const nfl = JSON.parse(await readFile(new URL("../test/fixtures/sample-nfl.json", import.meta.url)));
       const data = { ...buildScoreboard(raw), fetchedAt: new Date().toISOString(), sample: true };
-      data.activePlayers = buildActivePlayers(raw, data.teams, gameStates(nfl), raw.scoringPeriodId, data.week);
+      const states = gameStates(nfl);
+      data.gameActive = process.env.SAMPLE_IDLE === "1" ? false : [...states.values()].includes("in");
+      data.activePlayers = buildActivePlayers(raw, data.teams, states, raw.scoringPeriodId, data.week);
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify(data));
     }

@@ -1,5 +1,10 @@
 const API_URL = "/api/scoreboard";
 
+// Automatic refresh: every 5 seconds while an NFL game is in progress,
+// otherwise once a minute (which is also how a game starting is noticed).
+const LIVE_REFRESH_MS = 5000;
+const IDLE_REFRESH_MS = 60000;
+
 // Default sort direction for each sortable column.
 const DEFAULT_DIR = { standing: "asc", record: "desc", points: "desc", projected: "desc" };
 
@@ -12,6 +17,7 @@ const state = {
   pSortKey: "points",
   pSortDir: "desc",
   loading: false,
+  timer: null,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -211,6 +217,7 @@ function renderHeader() {
     const t = new Date(d.fetchedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
     parts.push(`Updated ${t}`);
   }
+  if (d.gameActive) parts.push("Live");
   if (d.sample) parts.push("Sample data");
   $("subtitle").textContent = parts.join(" · ");
 }
@@ -232,9 +239,20 @@ function setLoading(on) {
   refreshBtn.classList.toggle("loading", on);
 }
 
-async function load() {
+function scheduleRefresh() {
+  clearTimeout(state.timer);
+  state.timer = null;
+  if (document.hidden) return; // paused while the page isn't visible
+  const delay = state.data && state.data.gameActive ? LIVE_REFRESH_MS : IDLE_REFRESH_MS;
+  state.timer = setTimeout(() => load({ quiet: true }), delay);
+}
+
+// quiet: automatic refresh, without the spinning Refresh button.
+async function load({ quiet = false } = {}) {
   if (state.loading) return;
-  setLoading(true);
+  clearTimeout(state.timer);
+  state.loading = true;
+  if (!quiet) setLoading(true);
   if (!state.data) renderSkeleton();
   try {
     const res = await fetch(API_URL, { cache: "no-store" });
@@ -255,7 +273,9 @@ async function load() {
       $("subtitle").textContent = "Scores unavailable";
     }
   } finally {
+    state.loading = false;
     setLoading(false);
+    scheduleRefresh();
   }
 }
 
@@ -301,7 +321,16 @@ document.querySelectorAll(".segmented button").forEach((btn) => {
 
 playersBtn.addEventListener("click", () => setView(state.view === "players" ? "teams" : "players"));
 
-refreshBtn.addEventListener("click", load);
+refreshBtn.addEventListener("click", () => load());
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    clearTimeout(state.timer);
+    state.timer = null;
+  } else {
+    load({ quiet: true });
+  }
+});
 
 renderSortHeaders();
 load();
