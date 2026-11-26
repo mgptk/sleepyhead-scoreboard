@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { addProjections, buildActivePlayers, gameStates, hasRosters, buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
+import { addProjections, buildActivePlayers, gameStates, gameRemaining, fractionRemaining, liveProjection, hasRosters, buildScoreboard, fetchLeague, leagueUrl, EspnError, normalizeEspnS2, normalizeSwid } from "../lib/espn.js";
 
 const sample = JSON.parse(readFileSync(new URL("./fixtures/sample-league.json", import.meta.url)));
 const sampleNfl = JSON.parse(readFileSync(new URL("./fixtures/sample-nfl.json", import.meta.url)));
@@ -162,7 +162,12 @@ test("active players: starters whose NFL game is in progress", () => {
   assert.equal(hasRosters(raw, 5), true);
   assert.equal(hasRosters(raw, 6), false);
   const players = buildActivePlayers(raw, teams, states, 5, 5);
-  assert.deepEqual(players, [{ id: 1, name: "P1", teamId: 7, teamAbbrev: "BIG", points: 12.35, projected: 14 }]);
+  // Without game-clock data, Projected is the pregame projection.
+  assert.deepEqual(players, [{ id: 1, name: "P1", teamId: 7, teamAbbrev: "BIG", points: 12.35, projected: 14, pregameProjected: 14 }]);
+  // At halftime: 12.345 so far + 14 x 0.5 still to play.
+  const live = buildActivePlayers(raw, teams, states, 5, 5, new Map([["1", 0.5]]));
+  assert.equal(live[0].projected, 19.35);
+  assert.equal(live[0].pregameProjected, 14);
 });
 
 test("game states come from the NFL scoreboard", () => {
@@ -176,4 +181,34 @@ test("game states come from the NFL scoreboard", () => {
   assert.ok(players.every((p) => states.get(String(sample.schedule.flatMap((m) => [m.home, m.away]).filter(Boolean)
     .flatMap((s) => s.rosterForCurrentScoringPeriod ? s.rosterForCurrentScoringPeriod.entries : [])
     .find((e) => e.playerId === p.id).playerPoolEntry.player.proTeamId)) === "in"));
+});
+
+test("fraction of game remaining from quarter and clock", () => {
+  assert.equal(fractionRemaining(0, 0), 1); // not started
+  assert.equal(fractionRemaining(1, 900), 1); // kickoff
+  assert.equal(fractionRemaining(2, 0), 0.5); // halftime
+  assert.equal(fractionRemaining(3, 450), 0.375);
+  assert.equal(fractionRemaining(4, 0), 0); // end of regulation
+  assert.equal(fractionRemaining(5, 300), 0); // overtime
+});
+
+test("game remaining reads in-progress games only, with clock or displayClock", () => {
+  const nfl = {
+    events: [
+      { competitions: [{ status: { type: { state: "in" }, period: 2, clock: 0 }, competitors: [{ team: { id: "1" } }, { team: { id: "2" } }] }] },
+      { competitions: [{ status: { type: { state: "in" }, period: 4, displayClock: "7:30" }, competitors: [{ team: { id: "3" } }, { team: { id: "4" } }] }] },
+      { competitions: [{ status: { type: { state: "post" }, period: 4, clock: 0 }, competitors: [{ team: { id: "5" } }] }] },
+    ],
+  };
+  const r = gameRemaining(nfl);
+  assert.equal(r.get("1"), 0.5);
+  assert.equal(r.get("4"), 450 / 3600);
+  assert.equal(r.has("5"), false);
+});
+
+test("live projection", () => {
+  assert.equal(liveProjection(9, 16, 0.5), 17);
+  assert.equal(liveProjection(20, 10, 0), 20); // game effectively over
+  assert.equal(liveProjection(3, 12, null), 12); // no clock data → pregame
+  assert.equal(liveProjection(3, null, 0.5), null);
 });
