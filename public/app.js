@@ -5,10 +5,14 @@ const API_URL = "/api/scoreboard";
 const LIVE_REFRESH_MS = 5000;
 const IDLE_REFRESH_MS = 60000;
 
-// Header title, and the offset from ESPN's week number to the week shown
-// (ESPN week 12 is shown as Week 1).
-const TITLE = "Splooge Week";
+// Offset from ESPN's week number to the week shown (ESPN week 12 is Week 1).
 const WEEK_OFFSET = 11;
+
+// The title is "Splooge <word>". After every update the word changes to a
+// random one that wasn't among the RECENT_WORDS most recently shown.
+const TITLE_WORDS = ["Week", "Break", "Fest", "Party", "Mania", "Spectacular", "Special", "Classic", "Showdown", "Blast", "Spray", "Splash"];
+const RECENT_WORDS = 6;
+const recentWords = ["Week"]; // the page starts on "Splooge Week"
 
 // Default sort direction for each sortable column.
 const DEFAULT_DIR = { standing: "asc", record: "desc", points: "desc", projected: "desc" };
@@ -139,6 +143,51 @@ function sortedPlayers(players, key, dir) {
   });
 }
 
+function ordinal(n) {
+  if (n == null) return "—";
+  const s = n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th";
+  return `${n}${s}`;
+}
+
+function nextTitleWord() {
+  const eligible = TITLE_WORDS.filter((w) => !recentWords.includes(w));
+  const word = eligible[Math.floor(Math.random() * eligible.length)];
+  recentWords.push(word);
+  while (recentWords.length > RECENT_WORDS) recentWords.shift();
+  return word;
+}
+
+// Rolls the new word in from the top while the old one rolls out the bottom.
+function rollTitleWord() {
+  const slot = $("title-word");
+  const word = nextTitleWord();
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const incoming = el("span", "word", word);
+  // Drop any word still rolling out from a previous change.
+  slot.querySelectorAll(".word.out").forEach((n) => n.remove());
+  const old = slot.querySelector(".word");
+  if (reduce || !old) {
+    slot.replaceChildren(incoming);
+    slot.style.width = "";
+    return;
+  }
+  const from = old.getBoundingClientRect().width;
+  old.className = "word out";
+  incoming.className = "word in";
+  slot.append(incoming);
+  const to = incoming.getBoundingClientRect().width;
+  slot.style.width = `${from}px`;
+  void slot.offsetWidth; // start the width transition from the old width
+  slot.style.width = `${to}px`;
+  const done = () => {
+    old.remove();
+    incoming.className = "word";
+    slot.style.width = "";
+  };
+  incoming.addEventListener("animationend", done, { once: true });
+  setTimeout(() => { if (old.isConnected) done(); }, 1000);
+}
+
 function renderPlayers() {
   const d = state.data;
   if (!d) return;
@@ -150,6 +199,7 @@ function renderPlayers() {
     rowsEl.replaceChildren(el("div", "empty", "No starters are in a game right now."));
     return;
   }
+  const teamsById = new Map(d.teams.map((t) => [t.id, t]));
   const frag = document.createDocumentFragment();
   for (const p of sortedPlayers(d.activePlayers, state.pSortKey, state.pSortDir)) {
     const row = el("div", "row");
@@ -158,7 +208,11 @@ function renderPlayers() {
     player.append(el("span", "name", p.name));
     player.title = p.name;
     row.append(player);
-    row.append(el("span", "c-fteam", p.teamAbbrev));
+    const fteam = el("span", "c-fteam");
+    fteam.append(el("span", "abbr-main", p.teamAbbrev));
+    const team = teamsById.get(p.teamId);
+    if (team) fteam.append(el("span", "abbr", `${ordinal(team.standing)} · ${fmtRecord(team)}`));
+    row.append(fteam);
     row.append(el("span", "c-pts", fmtPoints(p.points)));
     row.append(el("span", "c-proj", fmtPoints(p.projected)));
     frag.append(row);
@@ -216,8 +270,6 @@ function renderSortHeaders() {
 function renderHeader() {
   const d = state.data;
   if (!d) return;
-  $("league-name").textContent = TITLE;
-  document.title = TITLE;
   const parts = [];
   if (d.week != null) parts.push(`Week ${d.week - WEEK_OFFSET}`);
   if (d.fetchedAt) {
@@ -268,6 +320,7 @@ async function load() {
     state.data = body;
     showBanner(null);
     renderHeader();
+    rollTitleWord();
     render();
   } catch (err) {
     const msg = err instanceof TypeError ? "Network error. Check your connection and try again." : err.message;
